@@ -13,13 +13,14 @@ const Title = () => {
 }
 
 //a Fret is a single input field, one note on one string
-const Fret = () => {
+const Fret = (id) => {
   return (
     <div className="Fret">
       <form>
         <input
           type="text"
           className="singleNote"
+          id={id.id}
         />
       </form>
     </div>
@@ -27,31 +28,31 @@ const Fret = () => {
 }
 
 //Frets is a list of 6 Frets, since there are 6 strings
-const Frets = () => {
+const Frets = (i) => {
   return (
     <div className='Frets'>
-      <Fret />
-      <Fret />
-      <Fret />
-      <Fret />
-      <Fret />
-      <Fret />
+      <Fret id={i.i} />
+      <Fret id={i.i + 1} />
+      <Fret id={i.i + 2} />
+      <Fret id={i.i + 3} />
+      <Fret id={i.i + 4} />
+      <Fret id={i.i + 5} />
     </div>
   )
 }
 
 //a Measure is comprised of 8 Frets
-const Measure = () => {
+const Measure = (measure) => {
   return (
     <div className='Measure'>
-      <Frets />
-      <Frets />
-      <Frets />
-      <Frets />
-      <Frets />
-      <Frets />
-      <Frets />
-      <Frets />
+      <Frets i={measure.measure} />
+      <Frets i={measure.measure + 6} />
+      <Frets i={measure.measure + 12} />
+      <Frets i={measure.measure + 18} />
+      <Frets i={measure.measure + 24} />
+      <Frets i={measure.measure + 30} />
+      <Frets i={measure.measure + 36} />
+      <Frets i={measure.measure + 42} />
     </div>
   )
 }
@@ -60,8 +61,12 @@ const Measure = () => {
 const Neck = () => {
   return (
     <div className='Neck'>
-      <Measure />
-      <Measure />
+      <Measure measure={0} />
+      <Measure measure={48} />
+      <Measure measure={96} />
+      <Measure measure={144} />
+      <Measure measure={192} />
+      <Measure measure={240} />
     </div>
   )
 }
@@ -81,7 +86,6 @@ let i = 0
 for (let note of notes) {
   note.id = i;
   i++;
-  console.log(i)
 }
 
 //called on keypress. when an arrow key is clicked, find the current element, and then add or subtract based on direction
@@ -105,7 +109,6 @@ function moveNote(arrow) {
     default:
       nextNote = currentNote;
   }
-  console.log("nextNote: ", nextNote)
   document.getElementById(nextNote).focus();
 }
 

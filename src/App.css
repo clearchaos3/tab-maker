@@ -2,7 +2,7 @@
   width: 100%;
   padding: 0;
   margin: -2px;
-  background-color: #F9EBE0;
+  background-color: #e0e0e0;
   border: none;
   font-weight: bold;
   font-size: 2em;
@@ -14,7 +14,6 @@
 }
 
 .Fret {
-  background-color: #F9EBE0;
   width: 2em;
   padding: .1em;
   margin: 1em;
@@ -26,21 +25,24 @@
 
 .Measure {
   border-top: .5em solid #016FB9;
+  display: inline-block;
+  border-right: 4px dashed rgba(0, 0, 0, 0.2);
 }
 
-.Neck {
-  background-color: #c2b4aa;
-}
+.Neck {}
 
 .singleNote {
   width: 100%;
   padding: 0;
   margin: -2px;
-  background-color: #F9EBE0;
   border: none;
   font-weight: bold;
-  font-size: 2em;
+  font-size: 1.8em;
   text-align: center;
+  border-radius: 6px;
+  background: #e0e0e0;
+  box-shadow: inset 3px 3px 12px #bebebe,
+    inset -3px -3px 12px #ffffff;
 }
 
 .singleNote:focus {
@@ -53,5 +55,5 @@ body {
   justify-items: center;
   align-content: center;
   align-items: center;
-  background-color: #F9EBE0;
+  background-color: #e0e0e0;
 }
