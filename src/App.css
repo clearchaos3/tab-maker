@@ -1,13 +1,14 @@
 .Title {
-  width:100%;
-  padding:0;
-  margin:-2px;
+  width: 100%;
+  padding: 0;
+  margin: -2px;
   background-color: #F9EBE0;
-  border:none;
+  border: none;
   font-weight: bold;
-  font-size:2em;
+  font-size: 2em;
   text-align: center;
 }
+
 .Title:focus {
   outline: none;
 }
@@ -23,7 +24,7 @@
   display: inline-block;
 }
 
-.Fretboard {
+.Measure {
   border-top: .5em solid #016FB9;
 }
 
@@ -32,22 +33,22 @@
 }
 
 .singleNote {
-  width:100%;
-  padding:0;
-  margin:-2px;
+  width: 100%;
+  padding: 0;
+  margin: -2px;
   background-color: #F9EBE0;
-  border:none;
+  border: none;
   font-weight: bold;
-  font-size:2em;
+  font-size: 2em;
   text-align: center;
 }
 
 .singleNote:focus {
-    outline: none;
+  outline: none;
 }
 
 body {
-  display:flex;
+  display: flex;
   justify-content: center;
   justify-items: center;
   align-content: center;
