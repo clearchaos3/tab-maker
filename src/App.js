@@ -1,4 +1,5 @@
 import './App.css';
+import { useRef } from "react";
 
 const Title = () => {
   return (
@@ -14,13 +15,21 @@ const Title = () => {
 
 //a Fret is a single input field, one note on one string
 const Fret = (id) => {
+  const inputEl = useRef(null);
+
+  function handleFocus() {
+    inputEl.current.select();
+    console.log('inputEl: ', inputEl)
+  }
   return (
     <div className="Fret">
       <form>
         <input
           type="text"
+          ref={inputEl}
           className="singleNote"
           id={id.id}
+          onFocus={handleFocus}
         />
       </form>
     </div>
@@ -80,14 +89,6 @@ function App() {
   );
 }
 
-//find every singleNote input element on the page, and give it an id starting at 0
-const notes = document.getElementsByClassName('singleNote');
-let i = 0
-for (let note of notes) {
-  note.id = i;
-  i++;
-}
-
 //called on keypress. when an arrow key is clicked, find the current element, and then add or subtract based on direction
 function moveNote(arrow) {
   const currentNote = document.activeElement
@@ -110,6 +111,7 @@ function moveNote(arrow) {
       nextNote = currentNote;
   }
   document.getElementById(nextNote).focus();
+  document.getElementById(nextNote).select();
 }
 
 //detect key presses
