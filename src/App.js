@@ -15,12 +15,23 @@ const Title = () => {
 
 //a Fret is a single input field, one note on one string
 const Fret = (id) => {
+
   const inputEl = useRef(null);
 
   function handleFocus() {
     inputEl.current.select();
     console.log('inputEl: ', inputEl)
   }
+
+  const regEx = /[a-wyzA-WYZ]/g
+
+  function handleChange() {
+    let value = inputEl.current.value
+    value = value.replace(regEx, '')
+    value = value.substring(value.length, value.length - 2)
+    console.log(value)
+  }
+
   return (
     <div className="Fret">
       <form>
@@ -30,6 +41,7 @@ const Fret = (id) => {
           className="singleNote"
           id={id.id}
           onFocus={handleFocus}
+          onChange={handleChange}
         />
       </form>
     </div>
@@ -110,8 +122,9 @@ function moveNote(arrow) {
     default:
       nextNote = currentNote;
   }
-  document.getElementById(nextNote).focus();
-  document.getElementById(nextNote).select();
+  const nextNoteElement = document.getElementById(nextNote)
+  console.log("nextNoteElement: ", nextNoteElement);
+  nextNoteElement.select();
 }
 
 //detect key presses

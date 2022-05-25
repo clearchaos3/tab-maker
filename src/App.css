@@ -1,11 +1,11 @@
 .Title {
   width: 100%;
-  padding: 0;
+  padding: 12px;
   margin: -2px;
   background-color: #e0e0e0;
   border: none;
   font-weight: bold;
-  font-size: 2em;
+  font-size: 3em;
   text-align: center;
 }
 
