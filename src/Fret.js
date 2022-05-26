@@ -1,12 +1,11 @@
 import { useRef } from "react";
-//a Fret is a single input field, one note on one string
+//a Fret is a single input field (one note on one string)
 const Fret = (id) => {
 
     const inputEl = useRef(null);
 
     function handleFocus() {
         inputEl.current.select();
-        console.log('inputEl: ', inputEl)
     }
 
     const regEx = /[a-wyzA-WYZ]/g
@@ -15,12 +14,11 @@ const Fret = (id) => {
         let value = inputEl.current.value
         value = value.replace(regEx, '')
         value = value.substring(value.length, value.length - 2)
-        console.log(value)
     }
 
     return (
         <div className="Fret">
-            <form>
+            <form id={id.id + "fretForm"}>
                 <input
                     type="text"
                     ref={inputEl}
@@ -30,7 +28,7 @@ const Fret = (id) => {
                     onChange={handleChange}
                 />
             </form>
-        </div>
+        </div >
     )
 }
 

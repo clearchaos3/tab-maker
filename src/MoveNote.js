@@ -1,7 +1,6 @@
 //called on keypress. when an arrow key is clicked, find the current element, and then add or subtract based on direction
 function moveNote(arrow) {
-    const currentNote = document.activeElement
-    console.log("currentNote: ", currentNote)
+    const currentNote = document.activeElement;
     let nextNote;
     switch (arrow) {
         case 'up':
@@ -20,7 +19,6 @@ function moveNote(arrow) {
             nextNote = currentNote;
     }
     const nextNoteElement = document.getElementById(nextNote)
-    console.log("nextNoteElement: ", nextNoteElement);
     nextNoteElement.select();
 }
 

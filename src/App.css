@@ -29,8 +29,6 @@
   border-right: 4px dashed rgba(0, 0, 0, 0.2);
 }
 
-.Neck {}
-
 .singleNote {
   width: 100%;
   padding: 0;
@@ -49,11 +47,26 @@
   outline: none;
 }
 
-body {
+.clearNotes {
+  background-color: #e0e0e0;
+  color: #016FB9;
   display: flex;
-  justify-content: center;
-  justify-items: center;
-  align-content: center;
-  align-items: center;
+  margin: 0 auto;
+  margin-top: 2em;
+  padding: 1em;
+  font-size: 1em;
+  font-weight: bold;
+  border: 0px;
+  border-radius: 100em;
+  text-align: center;
+  transition: all .2s;
+}
+
+.clearNotes:hover {
+  box-shadow: inset 3px 3px 12px #bebebe,
+    inset -3px -3px 12px #ffffff;
+}
+
+body {
   background-color: #e0e0e0;
 }
