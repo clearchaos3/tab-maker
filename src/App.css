@@ -1,7 +1,7 @@
 .Title {
   width: 100%;
   padding: 12px;
-  margin: -2px;
+  margin-bottom: .5em;
   background-color: #e0e0e0;
   border: none;
   font-weight: bold;
@@ -23,11 +23,20 @@
   display: inline-block;
 }
 
-.Measure {
-  border-top: .5em solid #016FB9;
-  display: inline-block;
-  border-right: 4px dashed rgba(0, 0, 0, 0.2);
+.Measure {}
+
+
+table {
+  box-shadow: 4px 4px 12px 12px rgba(199, 199, 199, 0.8);
+  border-collapse: collapse;
+  margin: 0 auto;
 }
+
+td {
+  border: .1em solid rgb(199, 199, 199);
+  box-sizing: border-box;
+}
+
 
 .singleNote {
   width: 100%;
@@ -39,8 +48,8 @@
   text-align: center;
   border-radius: 6px;
   background: #e0e0e0;
-  box-shadow: inset 3px 3px 12px #bebebe,
-    inset -3px -3px 12px #ffffff;
+  box-shadow: inset 3px 3px 12px rgba(191, 191, 191, 0.6),
+    inset -3px -3px 12px rgba(255, 255, 255, 0.6);
 }
 
 .singleNote:focus {
@@ -63,8 +72,8 @@
 }
 
 .clearNotes:hover {
-  box-shadow: inset 3px 3px 12px #bebebe,
-    inset -3px -3px 12px #ffffff;
+  box-shadow: inset 3px 3px 12px rgba(191, 191, 191, 0.6),
+    inset -3px -3px 12px rgba(255, 255, 255, 0.6);
 }
 
 body {
