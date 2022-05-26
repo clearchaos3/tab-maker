@@ -22,7 +22,7 @@ const Fret = (id) => {
                 <input
                     type="text"
                     ref={inputEl}
-                    className="singleNote"
+                    className='singleNote'
                     id={id.id}
                     onFocus={handleFocus}
                     onChange={handleChange}
