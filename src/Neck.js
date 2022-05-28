@@ -1,26 +1,22 @@
 import Measure from './Measure'
 
 const Neck = () => {
-    const multiple = 48
+    const multiple = 96
     return (
         <div className='Neck'>
-            <table>
-                <tr>
-                    <td><Measure measure={multiple * 0} /></td>
-                    <td><Measure measure={multiple * 1} /></td>
-                    <td><Measure measure={multiple * 2} /></td>
-                </tr>
-                <tr>
-                    <td><Measure measure={multiple * 3} /></td>
-                    <td><Measure measure={multiple * 4} /></td>
-                    <td><Measure measure={multiple * 5} /></td>
-                </tr>
-                <tr>
-                    <td><Measure measure={multiple * 6} /></td>
-                    <td><Measure measure={multiple * 7} /></td>
-                    <td><Measure measure={multiple * 8} /></td>
-                </tr>
-            </table>
+            <Measure measure={multiple * 0} />
+            <Measure measure={multiple * 1} />
+            <Measure measure={multiple * 2} />
+
+
+            <Measure measure={multiple * 3} />
+            <Measure measure={multiple * 4} />
+            <Measure measure={multiple * 5} />
+
+
+            <Measure measure={multiple * 6} />
+            <Measure measure={multiple * 7} />
+            <Measure measure={multiple * 8} />
         </div>
     )
 }

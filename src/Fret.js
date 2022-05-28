@@ -8,12 +8,18 @@ const Fret = (id) => {
         inputEl.current.select();
     }
 
-    const regEx = /[a-wyzA-WYZ]/g
+    // const regEx = /[a-wyzA-WYZ]/g
+
+    // function handleChange() {
+    //     let value = inputEl.current.value
+    //     value = value.replace(regEx, '')
+    //     value = value.substring(value.length, value.length - 2)
+    // }
 
     function handleChange() {
-        let value = inputEl.current.value
-        value = value.replace(regEx, '')
-        value = value.substring(value.length, value.length - 2)
+        if (true) {
+            //do powerChord
+        }
     }
 
     return (
@@ -26,6 +32,7 @@ const Fret = (id) => {
                     id={id.id}
                     onFocus={handleFocus}
                     onChange={handleChange}
+                    placeholder="-"
                 />
             </form>
         </div >
