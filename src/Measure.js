@@ -1,10 +1,12 @@
 import Frets from './Frets'
+import Strings from './Strings';
 
 //a Measure is comprised of 8 Frets
 const Measure = (measure) => {
     const base = 6;
     return (
         <div className='Measure'>
+            <Strings />
             <Frets i={measure.measure} />
             <Frets i={measure.measure + base} />
             <Frets i={measure.measure + base * 2} />
