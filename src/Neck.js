@@ -12,7 +12,6 @@ export default function Neck({ powerChord }) {
             <Measure measure={multiple * 5} powerChord={powerChord} />
             <Measure measure={multiple * 6} powerChord={powerChord} />
             <Measure measure={multiple * 7} powerChord={powerChord} />
-            <Measure measure={multiple * 8} powerChord={powerChord} />
         </div>
     )
 };

@@ -1,4 +1,4 @@
-export default function PowerChord({ powerChord, setPowerChord }) {
+export default function PowerChordButton({ powerChord, setPowerChord }) {
 
     function togglePowerChord() {
         setPowerChord(powerChord === 0 ? 1 : 0);
