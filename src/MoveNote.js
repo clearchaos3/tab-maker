@@ -1,5 +1,5 @@
 //called on keypress. when an arrow key is clicked, find the current element, and then add or subtract based on direction
-function moveNote(arrow) {
+export default function moveNote(arrow) {
     const currentNote = document.activeElement;
     let nextNote;
     switch (arrow) {
@@ -20,6 +20,4 @@ function moveNote(arrow) {
     }
     const nextNoteElement = document.getElementById(nextNote)
     nextNoteElement.select();
-}
-
-export default moveNote;
+};

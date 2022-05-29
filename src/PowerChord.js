@@ -1,8 +1,5 @@
-import { useState } from "react";
+export default function PowerChord({ powerChord, setPowerChord }) {
 
-
-const PowerChord = () => {
-    const [powerChord, setPowerChord] = useState(0);
     function togglePowerChord() {
         setPowerChord(powerChord === 0 ? 1 : 0);
     }
@@ -11,6 +8,4 @@ const PowerChord = () => {
     return (
         <button className="PowerChord" onClick={() => togglePowerChord()}>Power Chords {emoji} </button >
     );
-}
-
-export default PowerChord;
+};

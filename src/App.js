@@ -1,4 +1,5 @@
 import './App.css';
+import { useState } from "react";
 import Title from './Title'
 import Neck from './Neck'
 import checkKey from './CheckKey';
@@ -9,18 +10,17 @@ function clearNotes() {
   notes.forEach(e => e.reset())
 }
 
-function App() {
+export default function App() {
+  const [powerChord, setPowerChord] = useState(0);
   return (
     <div className="App">
       <Title />
       <Neck />
       <button className="clearNotes" onClick={clearNotes}>Clear All Notes</button>
-      <PowerChord />
+      <PowerChord powerChord={powerChord} setPowerChord={setPowerChord} />
     </div >
   );
 }
 
 //detect key presses
 document.onkeydown = checkKey;
-
-export default App;

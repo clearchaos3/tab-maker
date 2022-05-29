@@ -2,7 +2,7 @@ import Frets from './Frets'
 import Strings from './Strings';
 
 //a Measure is comprised of 8 Frets
-const Measure = (measure) => {
+export default function Measure(measure) {
     const base = 6;
     return (
         <div className='Measure'>
@@ -25,6 +25,4 @@ const Measure = (measure) => {
             <Frets i={measure.measure + base * 15} />
         </div>
     )
-}
-
-export default Measure;
+};

@@ -1,4 +1,4 @@
-const Title = () => {
+export default function Title() {
     return (
         <form>
             <input
@@ -8,6 +8,4 @@ const Title = () => {
             />
         </form>
     )
-}
-
-export default Title;
+};

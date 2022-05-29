@@ -1,21 +1,19 @@
 import moveNote from './MoveNote'
 
-function checkKey(e) {
+export default function checkKey(e) {
 
     e = e || window.event;
 
-    if (e.keyCode === 38) {
-        moveNote('up')
+    switch (e.keyCode) {
+        case 38: moveNote('up');
+            break;
+        case 40: moveNote('down');
+            break;
+        case 39: moveNote('right');
+            break;
+        case 37: moveNote('left');
+            break;
+        default:
+            break;
     }
-    else if (e.keyCode === 40) {
-        moveNote('down')
-    }
-    else if (e.keyCode === 37) {
-        moveNote('left')
-    }
-    else if (e.keyCode === 39) {
-        moveNote('right')
-    }
-}
-
-export default checkKey;
+};

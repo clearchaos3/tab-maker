@@ -1,7 +1,7 @@
 import Fret from './Fret'
 
 //Frets is a list of 6 Frets, since there are 6 strings
-const Frets = (i) => {
+export default function Frets(i) {
     return (
         <div className='Frets'>
             <Fret id={i.i} />
@@ -12,6 +12,4 @@ const Frets = (i) => {
             <Fret id={i.i + 5} />
         </div>
     )
-}
-
-export default Frets;
+};

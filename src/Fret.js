@@ -1,6 +1,6 @@
 import { useRef } from "react";
 //a Fret is a single input field (one note on one string)
-const Fret = (id) => {
+export default function Fret(id) {
 
     const inputEl = useRef(null);
 
@@ -37,6 +37,4 @@ const Fret = (id) => {
             </form>
         </div >
     )
-}
-
-export default Fret;
+};

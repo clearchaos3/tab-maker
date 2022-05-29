@@ -1,4 +1,4 @@
-const Strings = (tuning) => {
+export default function Strings(tuning) {
     return (
         <div className='Strings'>
             <div className="String">E</div>
@@ -9,6 +9,4 @@ const Strings = (tuning) => {
             <div className="String">E</div>
         </div>
     )
-}
-
-export default Strings;
+};
