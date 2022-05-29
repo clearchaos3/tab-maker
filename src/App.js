@@ -15,7 +15,7 @@ export default function App() {
   return (
     <div className="App">
       <Title />
-      <Neck />
+      <Neck powerChord={powerChord} />
       <button className="clearNotes" onClick={clearNotes}>Clear All Notes</button>
       <PowerChord powerChord={powerChord} setPowerChord={setPowerChord} />
     </div >
