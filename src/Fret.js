@@ -17,9 +17,8 @@ export default function Fret(id, { powerChord }) {
     // }
 
     function handleChange({ powerChord }) {
-        console.log("powerChord: ", id.powerChord)
+        // console.log("powerChord: ", id.powerChord)
     }
-
 
     return (
         <div className="Fret">
